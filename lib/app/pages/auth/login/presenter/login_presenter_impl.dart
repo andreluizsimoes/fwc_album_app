@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:developer';
 
 import 'package:fwc_album_app/app/core/exceptions/unauthorized_exception.dart';
