@@ -9,6 +9,8 @@ mixin Loader<T extends StatefulWidget> on State<T> {
       isOpen = true;
       showDialog(
         context: context,
+        barrierDismissible:
+            false, // Não deixa o Loader "quebrar" ao ser clicado na tela
         builder: (_) {
           return LoadingAnimationWidget.threeArchedCircle(
             color: Colors.white,

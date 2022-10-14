@@ -5,7 +5,7 @@ class RegisterUserModel {
   final String email;
   final String password;
   final String confirmPassword;
-  
+
   RegisterUserModel({
     required this.name,
     required this.email,
@@ -14,7 +14,7 @@ class RegisterUserModel {
   });
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
+    return {
       'name': name,
       'email': email,
       'password': password,
@@ -33,5 +33,6 @@ class RegisterUserModel {
 
   String toJson() => json.encode(toMap());
 
-  factory RegisterUserModel.fromJson(String source) => RegisterUserModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory RegisterUserModel.fromJson(String source) =>
+      RegisterUserModel.fromMap(json.decode(source));
 }
