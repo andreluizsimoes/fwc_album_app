@@ -37,16 +37,14 @@ class GroupsStickers {
   factory GroupsStickers.fromMap(Map<String, dynamic> map) {
     return GroupsStickers(
       id: map['id'] as int,
-      countryCode: map['country_code'] as String,
-      countryName: map['country_name'] as String,
-      stickersStart: map['stickers_start'] as int,
-      stickersEnd: map['stickers_end'] as int,
+      countryCode: map['country_code'] ?? '',
+      countryName: map['country_name'] ?? '',
+      stickersStart: map['stickers_start']?.toInt() ?? 0,
+      stickersEnd: map['stickers_end']?.toInt() ?? 0,
       stickers: List<UserStickerModel>.from(
-        (map['stickers'] as List<int>).map<UserStickerModel>(
-          (x) => UserStickerModel.fromMap(x as Map<String, dynamic>),
-        ),
+        (map['stickers']?.map((x) => UserStickerModel.fromMap(x))),
       ),
-      flag: map['flag'] as String,
+      flag: map['flag'] ?? '',
     );
   }
 

@@ -43,13 +43,13 @@ class UserModel {
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
       id: map['id'] as int,
-      name: map['name'] as String,
-      email: map['email'] as String,
-      totalAlbum: map['total_album'] as int,
-      totalStickers: map['total_stickers'] as int,
-      totalDuplicates: map['total_duplicates'] as int,
-      totalComplete: map['total_complete'] as int,
-      totalCompletePercent: map['total_complete_percent'] as int,
+      name: map['name'] ?? '',
+      email: map['email'] ?? '',
+      totalAlbum: map['total_album']?.toInt() ?? 0,
+      totalStickers: map['total_stickers']?.toInt() ?? 0,
+      totalDuplicates: map['total_duplicates']?.toInt() ?? 0,
+      totalComplete: map['total_complete']?.toInt() ?? 0,
+      totalCompletePercent: map['total_complete_percent']?.toInt() ?? 0,
     );
   }
 

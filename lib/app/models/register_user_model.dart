@@ -24,10 +24,10 @@ class RegisterUserModel {
 
   factory RegisterUserModel.fromMap(Map<String, dynamic> map) {
     return RegisterUserModel(
-      name: map['name'] as String,
-      email: map['email'] as String,
-      password: map['password'] as String,
-      confirmPassword: map['password_confirmation'] as String,
+      name: map['name'] ?? '',
+      email: map['email'] ?? '',
+      password: map['password'] ?? '',
+      confirmPassword: map['password_confirmation'] ?? '',
     );
   }
 
