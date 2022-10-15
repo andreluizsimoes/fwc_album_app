@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.dev.andresimoes.fwc_album_app">
    <application
-        android:label="fwc_album_app"
+        android:label="FWC Dart Week"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
