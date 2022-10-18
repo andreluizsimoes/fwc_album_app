@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.dev.andresimoes.fwc_album_app">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="FWC Dart Week"
         android:name="${applicationName}"
